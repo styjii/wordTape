@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #16182d;
+    font-family: "Courier New", Courier, Monospace;
+}
+/* centered the elements */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    color: #f4f4f6;
+}
+/* wordType style */
+.wordType {
+    color: #dacf29;
+}
+/* Cursor Style */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    vertical-align: middle;
+    background: #f4f4f6;
+    padding-left: 4px;
+    animation: blink .8s infinite;
+}
+/* If we hit, the animation must stop */
+.cursor.typing {
+    animation: none;
+}
+/* Cursor animation */
+@keyframes blink {
+    0% { background: #f4f4f6; }
+    49% { background: #16182d; }
+    50% { background: #16182d; }
+    99% { background: #f4f4f6; }
+}
